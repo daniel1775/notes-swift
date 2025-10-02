@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct Modifiers: View {
     var body: some View {
         VStack {
             Circle()
@@ -17,11 +17,10 @@ struct ContentView: View {
                 .border(.black)
                 .frame(width: 70)
                 .background(.red)
-                
         }
     }
 }
 
 #Preview {
-    ContentView()
+    Modifiers()
 }
