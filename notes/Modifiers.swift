@@ -17,6 +17,10 @@ struct Modifiers: View {
                 .border(.black)
                 .frame(width: 70)
                 .background(.red)
+            Text("World")
+                .border(.black)
+                .frame(width: 70)
+                .background(.blue)
         }
     }
 }
