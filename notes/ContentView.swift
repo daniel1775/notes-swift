@@ -3,21 +3,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Circle()
-                .frame(width: 300, height: 300)
-                .foregroundStyle(Color.blue)
-                .background(.green)
-                .padding(30)
-                .background(.yellow)
-                // .frame(width: 100, height: 100)
-                .background(.red)
-            
-            Text("Hello")
-                .border(.black)
-                .frame(width: 70)
-                .background(.red)
-                
+        VStack(alignment: .center) {
+            Image("kratos")
+                .resizable()
+                .frame(height: 400)
+                .cornerRadius(200)
+            Button("Press here to play") {
+                print("Loading game...")
+            }
+                .padding(15)
+                .foregroundStyle(Color.white)
+                .background(Color.green)
         }
     }
 }
