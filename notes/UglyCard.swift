@@ -29,12 +29,14 @@ struct UglyCard: View {
         .padding(.horizontal, 20)
         .padding(.vertical, 14)
         .border(.black, width: 2)
-        .background(Color.teal)
+        .background(Color.teal.opacity(0.4))
     }
     
     @ViewBuilder
     func dotsIcon() -> some View {
         VStack {
+            // ..< = Half-Open Range Operator): Exclude the last index
+            // ... -> Closed Range Operator: Include the last index
             ForEach(0..<3) { _ in
                 Image(systemName: "circle.fill")
                     .resizable()
