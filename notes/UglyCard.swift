@@ -2,25 +2,34 @@
 import SwiftUI
 
 struct UglyCard: View {
-    let imageWidth: CGFloat = 40;
-    let dotSize: CGFloat = 6
+    let imageWidth: CGFloat = 30;
+    let dotSize: CGFloat = 4
     
     var body: some View {
-        HStack() {
-            Image(systemName: "heart")
-                .resizable()
-                .frame(width: imageWidth, height: imageWidth - 5)
-            Spacer()
-            Text("Hello")
-                .font(.largeTitle)
-                .background(Color.gray)
-            Spacer()
-            dotsIcon()
-            
+        VStack(alignment: .leading) {
+            HStack {
+                Text("Title")
+                    .font(.largeTitle)
+                Spacer()
+                dotsIcon()
+            }
+            .padding(.bottom, 18)
+            Text("I am a ugly description for an ugly card, please remove me then add something nice")
+            HStack(alignment: .bottom) {
+                Spacer()
+                Image(systemName: "heart")
+                    .resizable()
+                    .frame(width: imageWidth, height: imageWidth - 5)
+                Image(systemName: "plus.circle")
+                    .resizable()
+                    .frame(width: imageWidth, height: imageWidth)
+            }
+            .padding(.top, 15)
         }
         .padding(.horizontal, 20)
-        .padding(.vertical, 5)
+        .padding(.vertical, 14)
         .border(.black, width: 2)
+        .background(Color.teal)
     }
     
     @ViewBuilder
