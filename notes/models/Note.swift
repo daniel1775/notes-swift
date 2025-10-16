@@ -1,6 +1,7 @@
 import SwiftUI
 
-struct Note {
+struct Note: Identifiable{
+    let id = UUID()
     let title: String
     let description: String
     let bgColor: Color

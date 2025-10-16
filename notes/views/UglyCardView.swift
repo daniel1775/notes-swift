@@ -1,11 +1,13 @@
 
 import SwiftUI
 
-struct UglyCard: View {
-    var noteData: Note;
+struct UglyCardView: View {
+    // Memberwise Initializer -> When a var or let has not a init value, swift assume that is a "prop" needed when a UglyCard instance is created
     
-    let imageWidth: CGFloat = 30;
-    let dotSize: CGFloat = 4
+    internal var noteData: Note;
+    
+    private let imageWidth: CGFloat = 30;
+    private let dotSize: CGFloat = 4
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -50,6 +52,6 @@ struct UglyCard: View {
 
 #Preview {
     return (
-        UglyCard(noteData: Note(title: "Radiohead", description: "Best band ever", bgColor: Color.blue))
+        UglyCardView(noteData: Note(title: "Radiohead", description: "Best band ever", bgColor: Color.blue))
     )
 }
