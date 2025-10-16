@@ -1,5 +1,7 @@
+import SwiftUI
 
-struct Card {
+struct Note {
     let title: String
     let description: String
+    let bgColor: Color
 }

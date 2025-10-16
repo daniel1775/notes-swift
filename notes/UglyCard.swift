@@ -2,19 +2,21 @@
 import SwiftUI
 
 struct UglyCard: View {
+    var noteData: Note;
+    
     let imageWidth: CGFloat = 30;
     let dotSize: CGFloat = 4
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("Title")
+                Text(noteData.title)
                     .font(.largeTitle)
                 Spacer()
                 dotsIcon()
             }
             .padding(.bottom, 18)
-            Text("I am a ugly description for an ugly card, please remove me then add something nice")
+            Text(noteData.description)
             HStack(alignment: .bottom) {
                 Spacer()
                 Image(systemName: "heart")
@@ -29,7 +31,7 @@ struct UglyCard: View {
         .padding(.horizontal, 20)
         .padding(.vertical, 14)
         .border(.black, width: 2)
-        .background(Color.teal.opacity(0.4))
+        .background(noteData.bgColor.opacity(0.4))
     }
     
     @ViewBuilder
@@ -47,5 +49,7 @@ struct UglyCard: View {
 }
 
 #Preview {
-    UglyCard()
+    return (
+        UglyCard(noteData: Note(title: "Radiohead", description: "Best band ever", bgColor: Color.blue))
+    )
 }
