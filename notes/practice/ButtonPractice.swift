@@ -6,6 +6,10 @@ struct ButtonPractice: View {
     
     var body: some View {
         Text("\(counter)")
+            .padding(8)
+            .font(.system(size: 36))
+            .border(.black)
+            .padding(.bottom, 16)
         Button {
             counter += 1
         } label: {
